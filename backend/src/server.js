@@ -22,4 +22,5 @@ if(ENV.NODE_ENV==="production"){
     })
 
 }
-app.listen(ENV.PORT,()=>console.log("server is running port on",ENV.PORT))
+const PORT = ENV.PORT || 5000;
+app.listen(PORT,()=>console.log(`port is running on ${PORT}`))
